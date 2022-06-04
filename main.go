@@ -13,7 +13,7 @@ func main() {
 	infoOfAllFiles, err := scanning.ListDirByWalk("/home/anton/projects/golang-2/project")
 
 	if err != nil {
-		err = fmt.Errorf("произошла ошибка выполнения! %s", err)
+		_ = fmt.Errorf("произошла ошибка выполнения! %s", err)
 
 	}
 
@@ -30,7 +30,7 @@ func main() {
 
 	remove.Remove(copyList, y)
 	if err != nil {
-		err = fmt.Errorf("ошибка удаления дубликатов %s", err)
+		_ = fmt.Errorf("ошибка удаления дубликатов %s", err)
 	}
 
 }
