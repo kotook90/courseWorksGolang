@@ -29,7 +29,7 @@ func ListDirByWalk(path string) (infoOfAllFiles map[string]os.FileInfo, err erro
 
 	})
 	if err != nil {
-		err = fmt.Errorf("ошибка рекурсивного обхода выбранной директории %s", err)
+		_ = fmt.Errorf("ошибка рекурсивного обхода выбранной директории %s", err)
 	}
 
 	for i, v := range infoOfAllFiles {
