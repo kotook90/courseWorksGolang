@@ -19,7 +19,7 @@ func Remove(duplicateAmount map[sorting.CopyFiles]int, yes string) {
 
 				err := os.Remove(i.Path)
 				if err != nil {
-					err = fmt.Errorf("ошибка при удалении дубликатов %s", err)
+					_ = fmt.Errorf("ошибка при удалении дубликатов %s", err)
 					return
 				}
 				fmt.Println("Дубликаты файлов успешно удалены")
