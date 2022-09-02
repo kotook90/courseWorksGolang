@@ -27,6 +27,7 @@ FROM scratch
 WORKDIR /short
 
 COPY --from=build /short/main /short/main
+COPY --from=build /short/server/configuration.json   /home/anton/projects/golang-4/short/server/configuration.json
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /usr/share/zoneinfo /usr/share/zoneinfo
 ENV TZ=Europe/Moscow
